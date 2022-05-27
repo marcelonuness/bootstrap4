@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Bootstrap - formulários</title>
+  </head>
+
+  <body style="margin-bottom: 200px;padding: 16px;">
+
+    <div class="container">
+        <!-- formulários 
+            classe: form-control-<opcoes>
+            opções: sm, lg
+        -->
+        <form>
+            
+            <!-- caixas de texto -->
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input class="form-control" type="text" id="usuario" placeholder="Digite seu usuário">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="email" id="email" placeholder="Digite seu email" readonly>
+                <small class="form-text">Email será validado</small>
+            </div>
+
+            <!-- select -->
+            <div class="form-group">
+                <label for="estados">Estados</label>
+                <select class="form-control" id="estados">
+                    <option>Acre</option>
+                    <option>Alagoas</option>
+                    <option>Amapá</option>
+                    <option>...</option>
+                </select>
+            </div>
+
+            <!-- textarea -->
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+            </div>
+
+            <!-- file input -->
+            <div class="form-group">
+                <label for="arquivo">Arquivo</label>
+                <input class="form-control-file" type="file" id="arquivo">
+            </div>
+
+
+            <!-- custom file input -->
+            <div class="custom-file">
+                <label class="custom-file-label">Selecione arquivo</label>
+                <input class="custom-file-input" type="file" id="arquivo">            
+            </div>
+            <br><br>
+
+            <!-- range -->
+            <div class="form-group">
+                <label id="range">Satisfação</label>
+                <input class="custom-range" type="range" 
+                id="range" min="1" max="5">
+            </div>
+
+            <!-- button -->
+            <input class="btn btn-primary" type="submit" value="Salvar">
+
+        </form>
+        <br><br>
+
+        <!-- Formulário inline -->
+        <form class="form-inline">
+            <input class="form-control mr-2" type="text" placeholder="Digite seu usuário">
+            <input class="form-control mr-1" type="password" placeholder="Digite sua senha">
+            <input class="btn btn-primary" type="submit" value="Logar">
+        </form>
+        <br><br>
+
+        <!-- 
+        Validação de formulário 
+        Classes: is-valid, is-invalid, invalid-feedback
+        -->
+        <form>
+            
+            <div class="form-group">
+                <label for="email-usuario">email</label>
+                <input class="form-control is-valid" type="text" id="email-usuario" placeholder="Digite seu e-mail">
+                <div class="valid-feedback">
+                    E-mail válido
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="senha-usuario">Senha</label>
+                <input class="form-control is-invalid" type="email" id="senha-usuario" placeholder="Digite sua senha">
+                <div class="invalid-feedback">
+                    Senha inválida
+                </div>
+            </div>
+
+            <input type="submit" value="Logar">
+
+        </form>
+        <div class="my-5" style="width: 100%; height: 50px; background-color:aquamarine;"></div>
+        <form>
+        
+            <h2>Grupo prepend</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input class="form-control" type="text" placeholder="e-mail">
+            </div> 
+    
+            <h2>Grupo append</h2>
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="e-mail">
+                <div class="input-group-append">
+                    <span class="input-group-text">@gmail.com</span>
+                </div>
+            </div> 
+    
+            <h2>URL customizada</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        https://site.com/usuario/
+                    </span>
+                </div>
+                <input class="form-control" type="text" placeholder="Digite seu usuário">
+            </div>
+    
+            <h2>Moeda</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input class="form-control" type="text" placeholder="Digite um valor">
+                <div class="input-group-append">
+                    <span class="input-group-text">,00</span>
+                </div>
+            </div>
+    
+            <!--
+            type: checkbox / radio
+            -->
+            <h2>Checkbox / radio</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="radio">
+                    </div> 
+                </div>
+                <input type="text" class="form-control">
+            </div>
+    
+    
+            <h2>Múltiplos inputs</h2>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">nome/e-mail</span>
+                </div>
+                <input class="form-control" type="text" placeholder="e-mail">
+                <input class="form-control" type="password" placeholder="senha">
+            </div> 
+    
+            <h2>Pesquisas</h2>
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Pesquisar" >
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-warning">Pesquisar</button>
+                </div>
+            </div>
+    
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
